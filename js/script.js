@@ -33,18 +33,19 @@ if (view) {
   map.setView([view.lat,view.lng], view.zoom);
 } else {
   //Default view over Lower Manhattan and Brooklyn
-  map.setView([40.7,-73.99], 14);
+  map.setView([37.539,-77.434], 16);
 }
 
 
 var tileLayers = [
   {
-    name: 'Present Day Aerials',
-    url: 'http://otile1.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.jpg'
+	  name: '1876 Beers Map',
+    url: 'http://dsl.richmond.edu/richmond_then_now/tiles/{z}/{x}/{y}.png', 
+    
   },
   {
-    name: '1924 Aerials',
-    url: 'http://tilecache.lolspec.com/tms/1924/{z}/{x}/{y}.png'
+    name: 'Present Day Aerials',
+    url: 'http://otile1.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.jpg'
   }      
 ];
 
