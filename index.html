@@ -1,7 +1,7 @@
 <html class="html">
 <head>
   <meta charset="UTF-8">
-  <title>Urban Scratchoff</title>
+  <title>Richmond Then & Now</title>
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <style type="text/css">
@@ -68,7 +68,7 @@
             <a href="#" class="navbar-icon pull-right visible-xs" id="nav-btn"><i class="fa fa-bars fa-lg white"></i></a>
             <a href="#" class="navbar-icon pull-right visible-xs" id="sidebar-toggle-btn"><i class="fa fa-search fa-lg white"></i></a>
           </div>
-          <a class="navbar-brand" href="#">Urban Scratchoff</a>
+          <a class="navbar-brand" href="#">Richmond Then & Now Scratchoff</a>
         </div>
         <div class="navbar-collapse collapse">
           <div class="navbar-form navbar-right" role="search">
@@ -82,8 +82,8 @@
           <ul class="nav navbar-nav">
             <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="about-btn"><i class="fa fa-question-circle white"></i>&nbsp;&nbsp;About</a></li>
             <li><a href="https://github.com/chriswhong/urbanscratchoff" data-toggle="collapse" data-target=".navbar-collapse.in" id="about-btn"><i class="fa fa-question-circle white"></i>&nbsp;&nbsp;Github</a></li>
-            <li><a href="http://chriswhong.com/local/building-urban-scratchoff/">Blog Post</a></li>
-            <li><a href="https://twitter.com/share" class="twitter-share-button"{count} data-url="http://urbanscratchoff.com" data-text="Urban Scratchoff - Scratch away historical imagery of NYC" data-via="chris_whong">Tweet</a>
+            <li><a href="http://www.letsgetspatial.com/">Blog</a></li>
+            <li><a href="https://twitter.com/share" class="twitter-share-button"{count} data-url="http://urbanscratchoff.com" data-text="Richmond Then & Now - Scratch away historical imagery of Richmond,VA" data-via="justinmadron">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
             <!-- <li class="dropdown">
               <a id="toolsDrop" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-globe white"></i>&nbsp;&nbsp;Tools <b class="caret"></b></a>
@@ -112,8 +112,8 @@
       <div id="sidebar">
         <div class="col-md-12">
           <br/>
-          <h4>Welcome!</h4>
-          <p>Welcome to Urban Scratchoff!  This site gives you a clever way to explore historical aerial imagery of New York City.  You can click and drag on the map to "scratch off" the historical imagery and reveal the same location's present-day imagery.  Hit the swap button below to reverse the layers.  Have fun!</p>
+          <h4>Richmond Then and Now</h4>
+          <p>Explore Richmond, Virginia in 1876, a decade after the end of the Civil War compared to present day Richmond. Wonderful details of buildings and their owners, parks and public buildings over-layed with a current aerial image of the city. Pan around and explore the city and use the "Scratch Off" button to see what has changed from 1867 to present day. Hit the swap button below to reverse the layers and the Pan & Zoom Map icon to move around and zoom. </p>
 
           <h4>Mode</h4>
             <div class="btn-group btn-group-sm buttons" role="group" aria-label="...">
@@ -133,14 +133,13 @@
             <br/><br/>  
           </div>
                   
-          <h4>Points of Interest</h4>
-          <p>Coming Soon!</p>
+          
   
         
     
 
         </div>
-        <div id="sidebar-footer" class="col-md-12"><p>A map hack by  <a href="https://twitter.com/chris_whong">@chris_whong</a></p></div> 
+        <div id="sidebar-footer" class="col-md-12"><p>Map by <a href="https://twitter.com/justinmadron">@justinmadron</a></p></div> 
       </div>
       <div id="map">
           <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog">
@@ -148,37 +147,34 @@
         <div class="modal-content">
           <div class="modal-header">
             <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h3 class="modal-title">About Urban Scratchoff</h3><p>A map hack by <a href="https://twitter.com/chris_whong">@chris_whong</a></p>
+            <h3 class="modal-title">About Richmond Then and Now</h3><p>A map by <a href="https://twitter.com/justinmadron">@justinmadron</a></p>
           </div>
           <div class="modal-body">
        
-            <h5>Idea</h5>
-            <p>I often drive on the BQE, an interstate highway that snakes its way through Brooklyn.  I've learned about the massive number buildings that had to be demolished, and people displaced, to make way for this and other urban highways.  I wanted to allow the user to drag their mouse over the old buildings on a historical layer and "reveal" the highway beneath to get a better idea of the cost of progress.  This was the original concept.</p>
-            <p>After some hacking and getting a prototype working, scratching off parts of the city became downright addictive (especially waterfronts/docks, large construction projects, highways, etc.)  </p>
+            <h5>About</h5>
+            <p>Richmond was a very different place a decade after the Civil War than it is today.  When we started working on the Visualizing the Past project for the Library of Virginia, we found a wonderful atlas of Richmond in 1876. This hand painted atlas, published by F.W Beers, features detailed buildings and their owners, parks and public landmarks. These maps served as our basemap for the project because of the great detail they provided. While working on the project I became really interested in what has changed around Richmond since this time.</p>
 
             <h5>Tech</h5>
-            <p>The map is loading two layers.  The bottom layer is a normal leaflet.js TileLayer.  The top layer makes use of leaflet's Canvas TileLayer, essentially setting up a grid of 256x256 HTML canvases.  For each canvas, a tile image is requested from the top layer, and is drawn into the canvas.  When the user "Scratches" the canvas, they are drawing into the canvas using the 'destination-out' composite operation.  This turns the affected area transparent, allowing the bottom layer to show through!  Here's <a href="http://chriswhong.com/local/building-urban-scratchoff/">a blog post about how and why I built Urban Scratchoff.</a></p>
+            <p>Full Disclosure: This code was adapted from Chris Whong. The map is loading two layers.  The bottom layer is a normal leaflet.js TileLayer.  The top layer makes use of leaflet's Canvas TileLayer, essentially setting up a grid of 256x256 HTML canvases.  For each canvas, a tile image is requested from the top layer, and is drawn into the canvas.  When the user "Scratches" the canvas, they are drawing into the canvas using the 'destination-out' composite operation.  This turns the affected area transparent, allowing the bottom layer to show through! Tiles were generated for the historical map using gdal2tiles.py.  Here's <a href="http://chriswhong.com/local/building-urban-scratchoff/">a blog post about how and why Chris Whong built Urban Scratchoff.</a></p>
 
     
             <h5>Imagery</h5>
-            <p>The historical imagery is provided by the New York Public Library (NYPL Labs) <a href="http://maps.nypl.org/warper/">Mapwarper</a> site -  "Sectional aerial maps of the City of New York / photographed and assembled under the direction of the chief engineer, July 1st, 1924."</p>  Mapwarper is a crowd-sourced imagery rectification tool.  If you see imagery that doesn't "line up" while using Urban Scratchoff, you can actually help out and fix the rectification points on the NYPL This layer is cached on my server.</p>
+            <p>The historical imagery is provided by <a href="http://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~220667~5505213:Section-K---Richmond,-Va--?sort=Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No&qvq=w4s:/who/Beers,+F.W./what/City+Atlas/where/Richmond+(Va.)/when/1876;sort:Pub_List_No_InitialSort%2CPub_Date%2CPub_List_No%2CSeries_No;lc:RUMSEY~8~1&mi=13&trs=22#">David Rumsey's Map Collection</a> site -  "Illustrated Atlas Of The City Of Richmond, Va. Published for the Southern and Southwestern Surveying and Pub. Co. By F.W. Beers, C.E. J.A. Enslow, Jr., J.P. Brown, Business Managers ... Entered ... 1876 by F.W. Beers ... Washington ."</p>  
 
             <p>The modern day imagery is <a href = "https://developer.mapquest.com/">Mapquest's OpenAerial</a> tileset</p>
 
             <h5>Attribution & Thanks</h5>
             <ul>
-              <li><a href="https://twitter.com/riordan">Dave Riordan</a> for answering an early tweet and pointing me to mapwarper</li>
-              <li><a href="https://twitter.com/recessionporn">John Krauss</a> and <a href="https://twitter.com/andrewxhill">Andrew Hill</a> for looking over my shoulder during development</li>
-              <li><a href="https://twitter.com/brymcbride">Bryan McBride</a> for making <a href="https://github.com/bmcbride/bootleaf">bootleaf</a>, an awesome template layout for leaflet maps & bootstrap</li>
-              <li><a href="https://twitter.com/vtcraghead">Bill Morris</a>, <a href="https://twitter.com/pcrickard">Paul Crickard</a> and <a href="https://twitter.com/sr_spatial">Steve Romalewski</a> for testing out the first prototype and giving feedback</li>
-              <li><a href="https://github.com/smeijer/L.GeoSearch">L.GeoSearch Plugin</a> for being awesome and easy to customize for NYC, & Google Maps for their geocoder</li>
-              <li><a href="https://twitter.com/atogle">Aaron Ogle</a> for guidance on combining tiles and HTML canvas</li>
-            </ul>
+              <li><a href="https://twitter.com/chris_whong">Chris Whong</a> for providing the code for modification on Github</li>
+			  <li><a href="http://dsl.richmond.edu/">Digital Scholarship Lab</a> for letting me host this on their site</li>
+			  
+			  
+              
 
-            <h5> Todo </h5>
-            <p>I would like to make it so that anyone can submit points of interest.  Everyone will be greeted with a marked up map full of interesting scratchoffs to explore.</p>
+            
 
             <strong><a href="https://github.com/chriswhong/urbanscratchoff">The code is on github</a>.  If you find a bug, please open an issue.  If you want to contribute or fork for your city, have at it!</strong>
+			<strong><a href="http://www.letsgetspatial.com/">Lets Get Spatial</a>.  If you have any questions or comments feel free to contact me via Twitter or Blog!</strong>
 
           </div>
           <div class="modal-footer">
