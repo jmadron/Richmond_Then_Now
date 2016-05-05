@@ -34,6 +34,6 @@ function drawingOnCanvas(canvasOverlay, params) {
 }
 ```
 
-"erasing" parts of the canvas overlay is done by setting a circle under the mouse to trasnparent, [this process.](http://jsfiddle.net/ArtBIT/WUXDb/1/)
+"erasing" parts of the canvas overlay is done by setting a circle under the mouse to transparent, [this process.](http://jsfiddle.net/ArtBIT/WUXDb/1/)
 
 
